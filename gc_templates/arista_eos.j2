@@ -117,6 +117,10 @@ system l1
    unsupported speed action error
    unsupported error-correction action error
 !
+banner login
+Hello!
+EOF
+!
 management api http-commands
    no shutdown
 !
@@ -126,7 +130,7 @@ management api gnmi
 management api netconf
    transport ssh default
 !
-!
+{% include "./gc_templates/eos/interfaces.j2" %}
 !
 ip routing
 !
